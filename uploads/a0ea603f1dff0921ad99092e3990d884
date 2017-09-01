@@ -1,0 +1,43 @@
+Access Key ID:
+AKIAIVXQD2YEKWGNAAKQ
+Secret Access Key:
+x40UNWDUZeqBVBt55aUOPrTbxblOS4VusZmiOGYi
+
+keys: app_demo.pem
+chmod 400 - makes the keys visible by only me
+
+user roles for os
+ubuntu, ec2user, root
+
+change keys user
+chown :Users app_demo.pem
+chmod 400 app_demo.pem
+
+ssh into ubuntu
+ssh -i app_demos.pem ubuntu@54.196.140.117
+OR
+ssh -vv -i app_demos.pem ubuntu@54.196.140.117
+
+sudo apt-get update
+sudo apt-get install apache2 libapache2-mod-php5 mysql-server php5-mysql php5
+
+mysql - root, admin
+
+restart apache: sudo service apache2 restart
+mysql_secure_installation
+mysql -u root -p
+exit
+
+sudo apt-get install phpmyadmin
+admin admin 
+
+sudo chown -R ubuntu /var/www
+chmod 755 /var/www
+
+cd /etc/apache2/apache2.conf
+
+rails server -b $IP -p $PORT
+
+
+
+
